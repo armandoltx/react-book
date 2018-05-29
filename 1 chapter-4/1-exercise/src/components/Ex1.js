@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 class ex1 extends PureComponent {
   render () {
     return (
-      <div calssName="book">
+      <div className="book">
         <div className="title">The Title</div>
         <div className='author'>The Author</div>
         <ul clasName='stats'>
