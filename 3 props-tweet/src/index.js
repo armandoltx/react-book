@@ -54,7 +54,7 @@ const ReplyButton = () => (
   <i className="fa fa-reply reply-button" />
 );
 
-function getRetweetCount(count) {
+function Count({count}) {
   if(count > 0) {
     return (
       <span className="retweet-count">
@@ -69,7 +69,7 @@ function getRetweetCount(count) {
 const RetweetButton = ({count}) => (
   <span className="retweet-button">
     <i className="fa fa-retweet" />
-    {getRetweetCount(count)}
+    <Count count={count} />
   </span>
 );
 
