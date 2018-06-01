@@ -83,7 +83,16 @@ const LikeButton = ({count}) => {
         </span>}
     </span>
   );
-} // other way to write the functions
+}
+// other way to write the function
+
+// const LikeButton = ({ count }) => (<span className="like-button">
+//   <i className="fa fa-heart" />
+//   <span className="like-count"> {count ? count : null}
+//   </span>
+// </span>
+// );
+
 
 const MoreOptionsButton = () => (
   <i className="fa fa-ellipsis-h more-options-button" />
