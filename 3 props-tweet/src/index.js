@@ -84,6 +84,7 @@ const LikeButton = ({count}) => {
     </span>
   );
 }
+
 // other way to write the function
 
 // const LikeButton = ({ count }) => (<span className="like-button">
@@ -92,7 +93,6 @@ const LikeButton = ({count}) => {
 //   </span>
 // </span>
 // );
-
 
 const MoreOptionsButton = () => (
   <i className="fa fa-ellipsis-h more-options-button" />
@@ -107,9 +107,9 @@ function Tweet({ tweet }) {
         <Time time={tweet.timestamp} />
         <Message text={tweet.message} />
         <div className="buttons">
-          <ReplyButton count={tweet.retweets} />
-          <RetweetButton count={tweet.likes} />
-          <LikeButton />
+          <ReplyButton  />
+          <RetweetButton count={tweet.retweets} />
+          <LikeButton count={tweet.likes} />
           <MoreOptionsButton />
         </div>
       </div>
