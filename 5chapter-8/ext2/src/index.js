@@ -5,26 +5,38 @@ import PropTypes from 'prop-types';
 
 
 const Stamp = () => {
-  <div className="stamp">
-    STAMP
-  </div>
-}
-
-const Sender = ({ fromPerson}) => {
-  var { name, address1, address2 } = fromPerson;
-  return (
-    <div className="label">
-      <p className="name">{name}</p>
-      <p className="address1">{address1}</p>
-      <p className="address2">{address2}</p>
+  return(
+    <div className="stamp">
+      STAMP
     </div>
   );
 }
 
-function Envelope({ fromPerson}) {
+const Sender = () => {
+  return (
+    <div className="label">
+      <p className="name">Mr. Sender</p>
+      <p className="address1">123 Fake St.</p>
+      <p className="address2">Boston, MA 02118</p>
+    </div>
+  );
+}
+
+const Receiver = () => {
+  return (
+    <div className="label">
+      <p className="name">Mrs. Receiver</p>
+      <p className="address1">123 Fake St.</p>
+      <p className="address2">San Francisco, Ca 94101</p>
+    </div>
+  );
+}
+
+const Envelope = () => {
   return(
     <div className="envelop">
-      <Sender fromPerson={returnLabel} />
+      <Sender />
+      <Receiver />
       <Stamp />
     </div>
   );
@@ -44,6 +56,6 @@ const recipietnLabel = {
 
 
 ReactDOM.render(
-  <Envelope toPerson={recipientLabel} fromPerson={returnLabel} />,
+  <Envelope />,
   document.getElementById('root')
 );
