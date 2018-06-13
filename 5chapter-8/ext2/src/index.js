@@ -14,7 +14,7 @@ const Stamp = () => {
 
 const Sender = (props) => {
   return (
-    <div className="label">
+    <div className="to-label">
       <p className="name">{props.name}</p>
       <p className="address1">{props.address1}</p>
       <p className="address2">{props.address2}</p>
@@ -22,21 +22,21 @@ const Sender = (props) => {
   );
 }
 
-const Receiver = () => {
+const Receiver = ({name, address1, address2}) => {
   return (
-    <div className="label">
-      <p className="name">Mrs. Receiver</p>
-      <p className="address1">123 Fake St.</p>
-      <p className="address2">San Francisco, Ca 94101</p>
+    <div className="from-label">
+      <p className="name">{name}</p>
+      <p className="address1">{address1}</p>
+      <p className="address2">{address2}</p>
     </div>
   );
 }
 
 const Envelope = () => {
   return(
-    <div className="envelop">
+    <div className="envelope">
       <Sender name="Mr. Sender" address1="123 Fake St." address2="Boston, MA 02118" />
-      <Receiver />
+      <Receiver name="Mrs. Receiver" address1="123 Fake St." address2={"San Francisco, Ca 94101"}/>
       <Stamp />
     </div>
   );
