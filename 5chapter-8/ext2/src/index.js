@@ -12,12 +12,12 @@ const Stamp = () => {
   );
 }
 
-const Sender = () => {
+const Sender = (props) => {
   return (
     <div className="label">
-      <p className="name">Mr. Sender</p>
-      <p className="address1">123 Fake St.</p>
-      <p className="address2">Boston, MA 02118</p>
+      <p className="name">{props.name}</p>
+      <p className="address1">{props.address1}</p>
+      <p className="address2">{props.address2}</p>
     </div>
   );
 }
@@ -35,7 +35,7 @@ const Receiver = () => {
 const Envelope = () => {
   return(
     <div className="envelop">
-      <Sender />
+      <Sender name="Mr. Sender" address1="123 Fake St." address2="Boston, MA 02118" />
       <Receiver />
       <Stamp />
     </div>
