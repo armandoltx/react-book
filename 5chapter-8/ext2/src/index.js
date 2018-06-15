@@ -56,7 +56,7 @@ const Receiver = ({ receiverProps}) => {
   );
 }
 
-const AdressLabel = ({ mailinLabel, className }) => {
+const AddressLabel = ({ mailinLabel, className }) => {
   let {name, address1, address2} = mailinLabel;
   return(
     <div className={`${className}`}>
@@ -67,6 +67,14 @@ const AdressLabel = ({ mailinLabel, className }) => {
   );
 }
 
+AddressLabel.propTypes = {
+  mailinLabel: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    address1: PropTypes.string.isRequired,
+    address2: PropTypes.string.isRequired
+  }).isRequired
+};
+
 const Envelope = ({ senderLabel, receiverLabel }) => {
   console.log("sender=> ", senderLabel);
   console.log("receiver => ", receiverLabel);
@@ -76,12 +84,17 @@ const Envelope = ({ senderLabel, receiverLabel }) => {
       <Sender1 name="Mr. Sender" address1="123 Fake St." address2="Boston, MA 02118" />
       <Receiver receiverProps={receiverLabel} />
       <Receiver1 name="Mrs. Receiver" address1="123 Fake St." address2={"San Francisco, Ca 94101"}/>
-      <AdressLabel className="to-label" mailinLabel={senderLabel} />
-      <AdressLabel className="from-label" mailinLabel={receiverLabel} />
+      <AddressLabel className="to-label" mailinLabel={senderLabel} />
+      <AddressLabel className="from-label" mailinLabel={receiverLabel} />
       <Stamp />
     </div>
   );
 }
+
+Envelope.propTypes = {
+  senderLabel: PropTypes.object,
+  receiverLabel: PropTypes.object
+};
 
 const returnLabel = {
   name: "Mr. Sender",
