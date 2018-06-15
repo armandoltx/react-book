@@ -12,9 +12,10 @@ const Stamp = () => {
   );
 }
 
-const Sender = (props) => {
+const Sender1 = (props) => {
   return (
-    <div className="to-label">
+    <div className="to-label-1">
+      <p>different props</p>  
       <p className="name">{props.name}</p>
       <p className="address1">{props.address1}</p>
       <p className="address2">{props.address2}</p>
@@ -22,7 +23,30 @@ const Sender = (props) => {
   );
 }
 
-const Receiver = ({name, address1, address2}) => {
+const Sender = ({senderProps}) => {
+  console.log("inside Sender => ", senderProps);
+  return (
+    <div className="to-label">
+      <p className="name">{senderProps.name}</p>
+      <p className="address1">{senderProps.address1}</p>
+      <p className="address2">{senderProps.address2}</p>
+    </div>
+  );
+}
+
+const Receiver1 = ({name, address1, address2}) => {
+  return (
+    <div className="from-label-1">
+      <p>different props</p>
+      <p className="name">{name}</p>
+      <p className="address1">{address1}</p>
+      <p className="address2">{address2}</p>
+    </div>
+  );
+}
+
+const Receiver = ({ receiverProps}) => {
+  var {name, address1, address2} = receiverProps;
   return (
     <div className="from-label">
       <p className="name">{name}</p>
@@ -32,11 +56,15 @@ const Receiver = ({name, address1, address2}) => {
   );
 }
 
-const Envelope = () => {
+const Envelope = ({ senderLabel, receiverLabel }) => {
+  console.log("sender=> ", senderLabel);
+  console.log("receiver => ", receiverLabel);
   return(
     <div className="envelope">
-      <Sender name="Mr. Sender" address1="123 Fake St." address2="Boston, MA 02118" />
-      <Receiver name="Mrs. Receiver" address1="123 Fake St." address2={"San Francisco, Ca 94101"}/>
+      <Sender senderProps={senderLabel} />
+      <Sender1 name="Mr. Sender" address1="123 Fake St." address2="Boston, MA 02118" />
+      <Receiver receiverProps={receiverLabel} />
+      <Receiver1 name="Mrs. Receiver" address1="123 Fake St." address2={"San Francisco, Ca 94101"}/>
       <Stamp />
     </div>
   );
@@ -48,7 +76,7 @@ const returnLabel = {
   address2: "Boston, MA 02118"
 }
 
-const recipietnLabel = {
+const recipientLabel = {
   name: "Mrs. Receiver",
   address1: "123 Fake St.",
   address2: "San Francisco, CA 94101"
@@ -56,6 +84,6 @@ const recipietnLabel = {
 
 
 ReactDOM.render(
-  <Envelope />,
+  <Envelope senderLabel={returnLabel} receiverLabel={recipientLabel}/>,
   document.getElementById('root')
 );
