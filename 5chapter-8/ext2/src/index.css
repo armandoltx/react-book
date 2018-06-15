@@ -38,11 +38,27 @@ body {
   left: 10px;
 }
 
+.to-label-0 {
+  position: absolute;
+  left: 400px;
+  top: 150px;
+  font-size: 10px;
+  color: orange;
+}
+
+.from-label-0 {
+  position: absolute;
+  top: 10px;
+  left: 350px;
+  font-size: 10px;
+  color: orange;
+}
+
 .to-label-1 {
   position: absolute;
-  left: 450px;
+  left: 600px;
   top: 150px;
-  font-size: 8px;
+  font-size: 10px;
   color: red;
 }
 
@@ -50,8 +66,8 @@ body {
 .from-label-1 {
   position: absolute;
   top: 10px;
-  left: 450px;
-  font-size: 8px;
+  left: 525px;
+  font-size: 10px;
   color: red;
 }
 

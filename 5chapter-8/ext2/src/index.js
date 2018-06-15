@@ -23,18 +23,7 @@ const Sender1 = (props) => {
   );
 }
 
-const Sender = ({senderProps}) => {
-  console.log("inside Sender => ", senderProps);
-  return (
-    <div className="to-label">
-      <p className="name">{senderProps.name}</p>
-      <p className="address1">{senderProps.address1}</p>
-      <p className="address2">{senderProps.address2}</p>
-    </div>
-  );
-}
-
-const Receiver1 = ({name, address1, address2}) => {
+const Receiver1 = ({ name, address1, address2 }) => {
   return (
     <div className="from-label-1">
       <p>different props</p>
@@ -45,13 +34,35 @@ const Receiver1 = ({name, address1, address2}) => {
   );
 }
 
+const Sender = ({senderProps}) => {
+  console.log("inside Sender => ", senderProps);
+  return (
+    <div className="to-label-0">
+      <p className="name">{senderProps.name}</p>
+      <p className="address1">{senderProps.address1}</p>
+      <p className="address2">{senderProps.address2}</p>
+    </div>
+  );
+}
+
 const Receiver = ({ receiverProps}) => {
   var {name, address1, address2} = receiverProps;
   return (
-    <div className="from-label">
+    <div className="from-label-0">
       <p className="name">{name}</p>
       <p className="address1">{address1}</p>
       <p className="address2">{address2}</p>
+    </div>
+  );
+}
+
+const AdressLabel = ({ mailinLabel, className }) => {
+  let {name, address1, address2} = mailinLabel;
+  return(
+    <div className={`${className}`}>
+      <p className="name">{name}</p>
+      <p className="address1">{address1}</p>
+      <p className="addess2">{address2}</p>
     </div>
   );
 }
@@ -65,6 +76,8 @@ const Envelope = ({ senderLabel, receiverLabel }) => {
       <Sender1 name="Mr. Sender" address1="123 Fake St." address2="Boston, MA 02118" />
       <Receiver receiverProps={receiverLabel} />
       <Receiver1 name="Mrs. Receiver" address1="123 Fake St." address2={"San Francisco, Ca 94101"}/>
+      <AdressLabel className="to-label" mailinLabel={senderLabel} />
+      <AdressLabel className="from-label" mailinLabel={receiverLabel} />
       <Stamp />
     </div>
   );
