@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  margin-top: 50px;
+}
+
+.single-line {
+  width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+  line-height: 2;
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey;
+}
