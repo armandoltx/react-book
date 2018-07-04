@@ -1,5 +1,5 @@
 import React from 'react';
-import Proptypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const FileIcon = ({ file }) => {
   let icon = 'fa-file-text-o';

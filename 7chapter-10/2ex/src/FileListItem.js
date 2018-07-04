@@ -1,6 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Time from './time';
+import FileIcon from './FileIcon';
+import FileName from './FileName';
+import CommitMessage from './CommitMessage';
+
 const FileListItem = ({ file }) => {
   return (
     <tr className="file-list-item" key={file.id}>
@@ -19,7 +24,7 @@ const FileListItem = ({ file }) => {
     </tr>
   );
 }
-FilesListItem.propTypes = {
+FileListItem.propTypes = {
   file: PropTypes.object.isRequired
 };
 
