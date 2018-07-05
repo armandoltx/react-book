@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  margin-top: 40px;
+}
+
+.Board {
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content:space-between;
+}
+
+.exterior {
+  border: 2px solid aqua;
+  width: 250px;
+  height: 320px;
+  padding: 10px 15px;
+  background-color: #ccc;
+  display: block;
+  
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding: 0;
+}
+
+li {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
