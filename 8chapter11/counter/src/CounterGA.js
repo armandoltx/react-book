@@ -24,7 +24,7 @@ class CounterGA extends Component {
   render () {
     return (
       <div className="counter-ga">
-        render a button where you click count them (increment rhe numbers)
+        render a button where you click count them GA code (increment the numbers)
         <button onClick={ this._incrementClicks }> { this.state.clicks } Clicks so far</button>
       </div>
     );
