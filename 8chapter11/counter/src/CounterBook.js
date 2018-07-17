@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import registerServiceWorker from './registerServiceWorker';
-import './index.css';
-import App from './App';
 
-// First example: A simple Parent and Child, where the Parent
-// simply prints to the console when the button is clicked in Child
-class Parent extends React.Component {
+class Parent extends Component {
   // Don't need to write this as an arrow function
   // because it does not use "this". You're free to
   // use the arrow syntax if you prefer, though.
@@ -34,5 +28,5 @@ class Child extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+
+export default Parent;
