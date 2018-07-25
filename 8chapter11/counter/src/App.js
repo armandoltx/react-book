@@ -5,6 +5,7 @@ import CounterGAes7 from './CounterGAes7';
 import PlusMinusGA from './PlusMinusGA';
 import PlusMinusCodeJobs from './PlusMinusCodeJobs';
 import PlusMinusEs7 from './PlusMinusEs7';
+import CalculatorCJ from './CalculatorCJ';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
         <PlusMinusGA />
         <PlusMinusCodeJobs />
         <PlusMinusEs7 />
+        <CalculatorCJ />
       </div>
     );
   }
