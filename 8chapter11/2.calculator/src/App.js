@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import CalculatorGa from './CalculatorGa';
+import CalculatorCJ from './CalculatorCJ';
+
 
 
 class App extends Component {
@@ -8,6 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <CalculatorGa />
+        <CalculatorCJ />
       </div>
     );
   }
